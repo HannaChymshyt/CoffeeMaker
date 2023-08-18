@@ -27,4 +27,8 @@ public class Main {
         return Integer.parseInt(scanner.nextLine());
     }
 
+    static void getOutput() {
+        String coffee = coffeeMachine.makeCoffee();
+        System.out.println("\nYour " + coffee + ". Enjoy");
+    }
 }
