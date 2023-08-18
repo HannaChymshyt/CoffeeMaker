@@ -1,0 +1,33 @@
+@startuml
+class coffee_maker.Main {
+~ {static} CoffeeMachine coffeeMachine
+~ {static} int userChoice
++ {static} void main(String[])
+~ {static} void promptForUserChoice()
+~ {static} int getUserChoice()
+~ {static} void getOutput()
+~ {static} void getResult(int)
+}
+interface coffee_maker.CoffeeType {
+~ String coffee()
+}
+class coffee_maker.Espresso {
++ String coffee()
+}
+class coffee_maker.CoffeeMachine {
+- CoffeeType coffeeType
++ void setCoffeeType(CoffeeType)
++ String makeCoffee()
+}
+class coffee_maker.Latte {
++ String coffee()
+}
+class coffee_maker.Cappuccino {
++ String coffee()
+}
+
+
+coffee_maker.CoffeeType <|.. coffee_maker.Espresso
+coffee_maker.CoffeeType <|.. coffee_maker.Latte
+coffee_maker.CoffeeType <|.. coffee_maker.Cappuccino
+@enduml
