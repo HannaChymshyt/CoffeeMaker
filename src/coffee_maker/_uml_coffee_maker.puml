@@ -1,12 +1,10 @@
 @startuml
 class coffee_maker.Main {
-~ {static} CoffeeMachine coffeeMachine
+~ {static} Validation validation
 ~ {static} int userChoice
 + {static} void main(String[])
 ~ {static} void promptForUserChoice()
 ~ {static} int getUserChoice()
-~ {static} void getOutput()
-~ {static} void getResult(int)
 }
 interface coffee_maker.CoffeeType {
 ~ String coffee()
@@ -24,6 +22,11 @@ class coffee_maker.Latte {
 }
 class coffee_maker.Cappuccino {
 + String coffee()
+}
+class coffee_maker.Validation {
+~ {static} CoffeeMachine coffeeMachine
+~ {static} void getResult(int)
+~ {static} void getOutput()
 }
 
 
