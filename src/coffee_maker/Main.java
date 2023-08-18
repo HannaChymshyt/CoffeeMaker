@@ -17,10 +17,12 @@ public class Main {
     }
 
     static void promptForUserChoice() {
-        System.out.print("Choose a drink:" +
-                "\n1 - Espresso" +
-                "\n2 - Cappuccino" +
-                "\n3 - Latte\n");
+        System.out.print("""
+                Choose a drink:
+                1 - Espresso.
+                2 - Cappuccino.
+                3 - Latte
+                """);
     }
 
     static int getUserChoice() {
