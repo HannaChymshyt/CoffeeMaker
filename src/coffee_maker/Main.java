@@ -1,6 +1,8 @@
 package coffee_maker;
 
 
+import java.util.Scanner;
+
 public class Main {
     static CoffeeMachine coffeeMachine;
     static int userChoice;
@@ -9,6 +11,7 @@ public class Main {
 
         coffeeMachine = new CoffeeMachine();
         promptForUserChoice();
+        userChoice = getUserChoice();
 
     }
 
@@ -17,6 +20,11 @@ public class Main {
                 "\n1 - Espresso" +
                 "\n2 - Cappuccino" +
                 "\n3 - Latte\n");
+    }
+
+    private static int getUserChoice() {
+        Scanner scanner = new Scanner(System.in);
+        return Integer.parseInt(scanner.nextLine());
     }
 
 }
